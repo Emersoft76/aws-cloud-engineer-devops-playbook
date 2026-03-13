@@ -1,12 +1,20 @@
-# Enterprise DevOps Platform on AWS
+# Enterprise AWS Platform
 
 Author: Emerson Maciel, Cloud Architect | AWS
 
 ---
 
-## Architecture Overview
+## Overview
 
-This project demonstrates how enterprise DevOps teams build a cloud platform.
+This project demonstrates how enterprises design a secure and scalable AWS platform.
+
+The platform includes:
+
+- networking
+- Kubernetes clusters
+- CI/CD pipelines
+- observability
+- global delivery
 
 ---
 
@@ -14,39 +22,28 @@ This project demonstrates how enterprise DevOps teams build a cloud platform.
 
 ### Networking
 
-- VPC
-- Public Subnets
-- Private Subnets
-- NAT Gateway
-
----
+Amazon VPC  
+Public and private subnets  
+NAT Gateways  
 
 ### Compute
 
-- Amazon EKS
-- Amazon ECS
-- AWS Lambda
+Amazon EKS  
+Amazon ECS  
 
----
+### Infrastructure Automation
 
-### CI/CD
-
-- GitHub Actions
-- Jenkins
-
----
-
-### Infrastructure
-
-- Terraform
-- Terragrunt
-
----
+Terraform  
+Terragrunt  
 
 ### Observability
 
-- CloudWatch
-- Grafana
-- Datadog
+CloudWatch  
+Grafana  
+Datadog  
+
+### Edge
+
+Amazon CloudFront
 
 ---
