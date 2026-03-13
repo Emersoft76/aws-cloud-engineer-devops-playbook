@@ -1,0 +1,47 @@
+name: Docker Build and Push
+
+on:
+  push:
+    paths:
+      - "containers/docker/sample-microservice/**"
+      - ".github/workflows/docker-build.yml"
+    branches:
+      - main
+
+env:
+  IMAGE_NAME: emersoft76/sample-microservice
+
+jobs:
+  docker:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract Git SHA
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./containers/docker/sample-microservice
+          file: ./containers/docker/sample-microservice/Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.sha_short }}
