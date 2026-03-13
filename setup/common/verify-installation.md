@@ -39,3 +39,16 @@ kubectl version --client
 helm version
 
 ---
+
+## Databricks CLI Setup
+
+Adicionar ao Linux:
+```bash
+pip install databricks-cli
+```
+Verificar:
+```bash
+databricks --version
+```
+
+---
