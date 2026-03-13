@@ -1,0 +1,35 @@
+{
+  "title": "Kubernetes Platform Dashboard",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Pod CPU Usage",
+      "targets": [
+        {
+          "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"default\"}[5m])) by (pod)"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Pod Memory Usage",
+      "targets": [
+        {
+          "expr": "sum(container_memory_usage_bytes{namespace=\"default\"}) by (pod)"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "HTTP Requests",
+      "targets": [
+        {
+          "expr": "sum(rate(http_requests_total[5m])) by (service)"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s"
+}
