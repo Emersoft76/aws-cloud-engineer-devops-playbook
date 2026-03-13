@@ -1,0 +1,11 @@
+cicd/
+  github-actions/
+    terraform-deploy.yml
+    docker-build.yml
+    kubernetes-deploy.yml
+
+  gitlab-ci/
+    pipeline.yml
+
+  jenkins/
+    Jenkinsfile
