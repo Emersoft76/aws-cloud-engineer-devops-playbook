@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+
+    environment {
+        TF_WORKING_DIR = 'iac/terraform/environments/dev'
+        DOCKER_IMAGE = 'emersoft76/sample-microservice'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Terraform Init and Validate') {
+            steps {
+                dir("${TF_WORKING_DIR}") {
+                    sh 'terraform init'
+                    sh 'terraform fmt -check -recursive'
+                    sh 'terraform validate'
+                }
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t ${DOCKER_IMAGE}:latest containers/docker/sample-microservice'
+            }
+        }
+
+        stage('Kubernetes Deploy') {
+            steps {
+                sh 'kubectl apply -f containers/kubernetes/deployments/sample-microservice-deployment.yaml'
+                sh 'kubectl apply -f containers/kubernetes/services/sample-microservice-service.yaml'
+                sh 'kubectl apply -f containers/kubernetes/ingress/sample-microservice-ingress.yaml'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed.'
+        }
+    }
+}
