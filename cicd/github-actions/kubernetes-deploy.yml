@@ -1,0 +1,46 @@
+name: Kubernetes Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "containers/kubernetes/**"
+      - ".github/workflows/kubernetes-deploy.yml"
+    branches:
+      - main
+
+env:
+  KUBE_NAMESPACE: default
+
+jobs:
+  deploy:
+    name: Deploy to Kubernetes
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v4
+        with:
+          version: latest
+
+      - name: Configure kubeconfig
+        run: |
+          mkdir -p "${HOME}/.kube"
+          echo "${{ secrets.KUBECONFIG }}" > "${HOME}/.kube/config"
+          chmod 600 "${HOME}/.kube/config"
+
+      - name: Deploy manifests
+        run: |
+          kubectl apply -n "${KUBE_NAMESPACE}" -f containers/kubernetes/deployments/sample-microservice-deployment.yaml
+          kubectl apply -n "${KUBE_NAMESPACE}" -f containers/kubernetes/services/sample-microservice-service.yaml
+          kubectl apply -n "${KUBE_NAMESPACE}" -f containers/kubernetes/ingress/sample-microservice-ingress.yaml
+
+      - name: Verify rollout
+        run: |
+          kubectl rollout status deployment/sample-microservice -n "${KUBE_NAMESPACE}" --timeout=120s
