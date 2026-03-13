@@ -1,0 +1,18 @@
+{
+  "propertyName": "enterprise-platform-cdn",
+  "origin": {
+    "hostname": "api.enterprise-platform.com"
+  },
+  "caching": {
+    "defaultTtl": 3600,
+    "maxTtl": 86400
+  },
+  "security": {
+    "waf": true,
+    "botProtection": true
+  },
+  "edge": {
+    "compression": true,
+    "http2": true
+  }
+}
