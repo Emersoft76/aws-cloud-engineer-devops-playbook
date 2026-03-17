@@ -22,10 +22,25 @@ Cloud Architect | AWS
 
 ## 📊 Repository Status
 
-![Stars](https://img.shields.io/github/stars/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge)
-![Repo Size](https://img.shields.io/github/repo-size/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge)
+<p align="center">
+
+<a href="https://github.com/Emersoft76/aws-cloud-engineer-devops-playbook/stargazers">
+  <img src="https://img.shields.io/github/stars/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge&logo=github&color=orange" />
+</a>
+
+<a href="https://github.com/Emersoft76/aws-cloud-engineer-devops-playbook/network/members">
+  <img src="https://img.shields.io/github/forks/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge&logo=github&color=blue" />
+</a>
+
+<a href="https://github.com/Emersoft76/aws-cloud-engineer-devops-playbook/commits">
+  <img src="https://img.shields.io/github/last-commit/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge&color=green" />
+</a>
+
+<a href="https://github.com/Emersoft76/aws-cloud-engineer-devops-playbook">
+  <img src="https://img.shields.io/github/repo-size/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge&color=purple" />
+</a>
+
+</p>)
 
 ---
 
