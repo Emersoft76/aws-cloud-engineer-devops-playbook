@@ -22,9 +22,9 @@ Cloud Architect | AWS
 
 # Repository Status
 
-![Stars](https://img.shields.io/github/stars/Emersoft76/aws-generative-ai-playbook?style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/Emersoft76/aws-generative-ai-playbook?style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/Emersoft76/aws-generative-ai-playbook?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge)
 
 ---
 
