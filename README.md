@@ -40,7 +40,7 @@ Cloud Architect | AWS
   <img src="https://img.shields.io/github/repo-size/Emersoft76/aws-cloud-engineer-devops-playbook?style=for-the-badge&color=purple" />
 </a>
 
-</p>)
+</p>
 
 ---
 
