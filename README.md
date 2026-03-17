@@ -8,6 +8,14 @@
 
 Advanced reference repository for **AWS Infrastructure Engineering, DevOps automation, CI/CD, Kubernetes, Terraform, Observability and Enterprise Cloud Platforms.**
 
+<p align="center">
+  <a href="https://github.com/Emersoft76/aws-cloud-engineer-devops-playbook">
+    <img src="https://img.shields.io/badge/⭐-Star%20this%20Repository-orange?style=for-the-badge" />
+  </a>
+</p>
+
+
+
 </p>
 
 <p align="center">
