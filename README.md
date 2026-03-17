@@ -18,6 +18,21 @@ Cloud Architect | AWS
 
 </p>
 
+
+# AWS Cloud Engineer & DevOps Infrastructure Playbook
+
+Enterprise cloud engineering, DevOps automation and platform architectures on AWS.
+
+<p align="center">
+  <a href="https://github.com/Emersoft76/aws-cloud-engineer-devops-playbook">
+    <img src="https://img.shields.io/badge/⭐-Star%20this%20Repository-orange?style=for-the-badge" />
+  </a>
+</p>
+
+---
+
+## 📊 Repository Status
+
 ---
 
 ## 📊 Repository Status
